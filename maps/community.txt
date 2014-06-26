@@ -1,0 +1,245 @@
+
+#
+# Colt AS8220
+#
+
+# Cities
+8220:65010	London
+8220:65011	Birmingham
+8220:65020	Paris
+8220:65022	Lyon
+8220:65023	Toulouse
+8220:65024	Marseille
+8220:65025	Bordeaux
+8220:65028	Strasbourg
+8220:65029	Lille
+8220:65030	Frankfurt
+8220:65031	Cologne
+8220:65032	Duesseldorf
+8220:65033	Hamburg
+8220:65034	Hannover
+8220:65035	Berlin
+8220:65036	Stuttgart
+8220:65037	Munich
+8220:65040	Amsterdam
+8220:65042	Rotterdam
+8220:65050	Madrid
+8220:65060	Milan
+8220:65061	Turin
+8220:65062	Rome
+8220:65070	Barcelona
+8220:65080	Brussels
+8220:65090	Vienna
+8220:65110	Zurich
+8220:65111	Basel
+8220:65120	Geneva
+8220:65130	Stockholm
+8220:65140	Dublin
+8220:65151	Rouen
+8220:65152	Nantes
+8220:65153	Poitiers
+8220:65156	Nice
+8220:65157	Dijon
+8220:65158	Massy
+8220:65160	Copenhagen
+8220:65170	International
+8220:65180	Lisbon
+8220:65200  USA
+8220:65201  New_York
+
+# Data Center
+#
+8220:65211	PCT_DC
+8220:65212	PGT_DC
+8220:65213	Bessieres_DC
+8220:65214	Wattignies_DC
+8220:65215	Les_Ulis_DC
+8220:65216	Frankfurt_DC
+8220:65217	Berlin_DC
+8220:65218	Amsterdam_DC
+8220:65219	Madrid_DC
+8220:65220	Barcelona_DC
+8220:65221	Milan_DC
+8220:65222	Rome_DC
+8220:65223	Turin_DC
+8220:65225	Birmingham_DC
+8220:65224	Hamburg_DC
+8220:65226	Brussels_DC
+8220:65227	Zurich_DC
+8220:65228	Vienna_DC
+8220:65229	WGC_DC
+8220:65230	Lisbon_DC
+8220:65231	Copenhagen_DC
+
+# Peer, Customer Type
+#
+8220:65400	Transit
+8220:65401	Public_Peer
+8220:65402	Private_Peer
+8220:65403	Customer
+8220:65404	Customer_No_Export
+8220:65405	Customer_Region_Local
+8220:65408	Leaked_blocked_prefix
+
+# Route types
+#
+8220:64001	Loadbalance
+8220:64002	Keep_Country_Local
+8220:64003	WDSL-Peer-Reflex
+8220:64005	Multihop_CPE
+
+# Local Pref
+#
+8220:63700 LP_120
+8220:63900 LP_40
+
+# Blackhole
+#
+8220:63999	Blackhole
+
+# Prepends and no-advertise
+#
+8220:63800	No_Colt_Export
+
+8220:63092	No_Adv_Upstream
+8220:63192	Prepend_Upstream_x1 
+8220:63292	Prepend_Upstream_x2
+8220:63392	Prepend_Upstream_x3
+
+8220:63099	No_Adv_Peers
+8220:63199	Prepend_Peers_x1 
+8220:63299	Prepend_Peers_x2
+8220:63399	Prepend_Peers_x3
+
+# City Specific Prepends and no advertise
+#
+8220:63001	London_No_Adv
+8220:63101	London_Prepend_x1 
+8220:63201	London_Prepend_x2
+8220:63301	London_Prepend_x3
+
+8220:63002	Frankfurt_No_Adv
+8220:63102	Frankfurt_Prepend_x1 
+8220:63202	Frankfurt_Prepend_x2
+8220:63302	Frankfurt_Prepend_x3
+
+8220:63003	Paris_No_Adv
+8220:63103	Paris_Prepend_x1 
+8220:63203	Paris_Prepend_x2
+8220:63303	Paris_Prepend_x3
+
+8220:63005	Milan_No_Adv
+8220:63105	Milan_Prepend_x1 
+8220:63205	Milan_Prepend_x2
+8220:63305	Milan_Prepend_x3
+
+8220:63006	Madrid_No_Adv
+8220:63106	Madrid_Prepend_x1 
+8220:63206	Madrid_Prepend_x2
+8220:63306	Madrid_Prepend_x3
+
+8220:63007	Barcelona_No_Adv
+8220:63107	Barcelona_Prepend_x1 
+8220:63207	Barcelona_Prepend_x2
+8220:63307	Barcelona_Prepend_x3
+
+8220:63008	Amstedam_No_Adv
+8220:63108	Amstedam_Prepend_x1 
+8220:63208	Amstedam_Prepend_x2
+8220:63308	Amstedam_Prepend_x3
+
+8220:63009	Brussels_No_Adv
+8220:63109	Brussels_Prepend_x1 
+8220:63209	Brussels_Prepend_x2
+8220:63309	Brussels_Prepend_x3
+
+8220:63010	Zurich_No_Adv
+8220:63110	Zurich_Prepend_x1 
+8220:63210	Zurich_Prepend_x2
+8220:63310	Zurich_Prepend_x3
+
+8220:63012	Vienna_No_Adv
+8220:63112	Vienna_Prepend_x1 
+8220:63212	Vienna_Prepend_x2
+8220:63312	Vienna_Prepend_x3
+
+8220:63014	Stockholm_No_Adv
+8220:63114	Stockholm_Prepend_x1 
+8220:63214	Stockholm_Prepend_x2
+8220:63314	Stockholm_Prepend_x3
+
+8220:63017	Copenhagen_No_Adv
+8220:63117	Copenhagen_Prepend_x1 
+8220:63217	Copenhagen_Prepend_x2
+8220:63317	Copenhagen_Prepend_x3
+
+8220:63018	Dublin_No_Adv
+8220:63118	Dublin_Prepend_x1 
+8220:63218	Dublin_Prepend_x2
+8220:63318	Dublin_Prepend_x3
+
+8220:63021	Lisbon_No_Adv
+8220:63121	Lisbon_Prepend_x1 
+8220:63221	Lisbon_Prepend_x2
+8220:63321	Lisbon_Prepend_x3
+
+8220:63023	Rome_No_Adv
+8220:63123	Rome_Prepend_x1 
+8220:63223	Rome_Prepend_x2
+8220:63323	Rome_Prepend_x3
+
+8220:63024	Turin_No_Adv
+8220:63124	Turin_Prepend_x1 
+8220:63224	Turin_Prepend_x2
+8220:63324	Turin_Prepend_x3
+
+# Peers
+8220:3356	Level_3
+
+# Level3
+
+3356:123	L3_Customer
+3356:666	L3_Peer
+
+# Level 3 Country Communities
+#
+3356:500   L3_UK
+3356:501   L3_Germany
+3356:502   L3_France
+3356:503   L3_Netherlands
+3356:504   L3_Belgium
+3356:505   L3_Italy
+3356:506   L3_Switzerland
+3356:507   L3_Sweden
+3356:508   L3_Spain
+3356:509   L3_Ireland
+3356:510   L3_Denmark
+3356:511   L3_Austria
+3356:512   L3_Czech Republic
+3356:513   L3_Poland
+3356:514   L3_Bulgaria
+3356:515   L3_Romania
+3356:516   L3_Hungary
+3356:517   L3_Norway
+3356:518   L3_Slovakia
+3356:519   L3_Finland
+3356:520   L3_Luxembourg
+3356:521   L3_Croatia
+3356:522   L3_Slovenia
+3356:523   L3_Estonia
+3356:524   L3_Serbia
+3356:550   L3_Saudi Arabia
+3356:551   L3_Djibouti
+3356:552   L3_South Africa
+3356:553   L3_United Arab Emirates
+3356:554   L3_Russia
+3356:575   L3_USA
+3356:576   L3_Canada
+
+3356:2		L3_Europe
+3356:3		L3_North_America
+
+3356:70		L3_LP70
+3356:80		L3_LP80
+3356:90		L3_LP90
+

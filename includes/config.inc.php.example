@@ -1,0 +1,131 @@
+<?
+
+$config['basedir']	= '/var/www/lg/';
+$config['url']		= 'http://localhost/lg';
+$config['title']	= 'IP';
+$config['subtitle']	= 'Looking Glass';
+$config['footnote'] = '&copy Rob Woodward 2014';
+$config['logo']		= 'images/logo.png';
+
+$config['default_type'] = 'traceroute';
+$config['pretty_output'] = TRUE;
+
+// Don't change this value unless you rename the maps database file.
+// make sure you run the build-maps.pl script to build this first.
+$config['maps_db'] = $config['basedir'] . 'maps/maps.sq3';
+
+
+$config['session_name'] = "IP_Looking_Glass";
+
+// Type configuration
+//
+// This is the availble options and should match the values in the
+// commands configuration below.
+
+$types = array ('showbgp' => 'BGP', 
+				'ping' => 'Ping', 
+				'traceroute' => 'Traceroute'
+				);
+
+//
+// Commands Configuration
+//
+// Commands to run for each OS type, if you add more commands
+// these should be added to the index.tpl radio form section.
+//
+// You can put in \n or \r\n when a command prompts for more input
+//
+// You must put ARG and SOURCE where needed, not putting ARG here
+// may be dangerous to your router CPU.
+//
+// For each command specify the actual command.
+// The start text which is shown and included in the output
+// The end text which is not included in the output.
+
+
+
+$commands = array (
+		
+		'IOS-XR' => array (
+			'termlen'		=> 'terminal length 0',
+			'quit'			=> 'quit',
+			'showbgp'		=> array (
+										'cmd' => 'show bgp ARG',
+										'start_text' => 'BGP routing',
+										'end_text' => 'quit'
+								),
+			'ping'			=> array (
+										'cmd' => 'ping ipv4 ARG source SOURCE verbose',
+										'start_text' => 'Sending',
+										'end_text' => 'quit'
+								),
+			'traceroute'	=> array (
+										'cmd' => "traceroute ipv4 ARG source SOURCE",
+										'start_text' => 'Tracing the route to',
+										'end_text' => 'quit'
+								)
+		),
+		'IOS' => array (
+			'termlen'		=> 'terminal length 0',
+			'quit'			=> 'quit',
+			'showbgp'		=> array (
+										'cmd' => 'show ip bgp ARG',
+										'start_text' => 'show ip bgp',
+										'end_text' => 'quit'
+								),
+			'ping'			=> array (
+										'cmd' => 'ping ip ARG source SOURCE',
+										'start_text' => 'ping ip',
+										'end_text' => 'quit'
+								),
+			'traceroute'	=> array (
+										'cmd' => "traceroute ip\r\nARG\r\nSOURCE\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+										'start_text' => 'Tracing the route to',
+										'end_text' => 'quit'
+								)
+		),
+		'JunOS' => array (
+			'termlen'		=> 'set cli screen-length 0',
+			'quit'			=> 'quit',
+			'showbgp'		=> array (
+										'cmd' => 'show route protocol bgp ARG detail table inet.0',
+										'start_text' => 'show route protocol bgp',
+										'end_text' => 'quit'
+								),
+			'ping'			=> array (
+										'cmd' => 'ping inet ARG source SOURCE count 5',
+										'start_text' => 'ping inet',
+										'end_text' => 'quit'
+								),
+			'traceroute'	=> array (
+										'cmd' => "traceroute inet ARG source SOURCE as-number-lookup no-resolve",
+										'start_text' => 'traceroute to',
+										'end_text' => 'quit'
+								)
+		)
+	);
+
+//
+// The router (or other network device) list.
+//
+// title:	The entry in the dropdown list for this router/device.
+// os:		OS of the device, should match the OS in the commands list.
+// source:	Source address to run traceroute and ping from.
+//
+$devices = array (
+		'cisco_crs' => array (
+			'title'		=> 'CRS',
+			'os'		=> 'IOS-XR',
+			'username'	=> 'user',
+			'password'	=> 'password',
+			'source'	=> '1.1.1.1'
+			),
+		'juniper_mx' => array (
+			'title'		=> 'Juniper',
+			'os'		=> 'JunOS',
+			'username'	=> 'user',
+			'password'	=> 'password',
+			'source'	=> '1.2.3.4'
+			)
+		);
+?>

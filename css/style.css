@@ -1,0 +1,58 @@
+#container {
+	width: 1000px;
+	margin: 10px auto;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid gray;
+	padding: 0;
+}
+
+#header {
+	height: 50px;
+	position: relative;
+	padding: 5px;
+	background: rgb(255,255,255);
+	border-bottom: 1px solid gray;
+}
+
+#content {
+	margin: 0 5px 0 5px;
+	padding: 10px;
+	clear: both;
+}
+
+#output {
+	margin: 0 5px 0 5px;
+	padding: 20px;
+	font-family: Consolas, monospace;
+	font-size: 75%;
+	border-top: 1px solid gray;
+}
+
+.best_path {
+	color: #662222;
+}
+
+.as_path {
+	font-weight: bold;
+}
+
+#footer {
+	margin: 0;
+	text-align: center;
+	padding: 5px;
+	color: #555555;
+	background: #CCCCCC;
+	border-top: 1px solid gray;
+}
+
+.rightalign {
+	padding: 0px;
+	margin: 10px 0px 8px 0px;
+	text-align: right;
+}
+
+body { 
+	margin: 0px; 
+	background-color: #DEDEDE;
+}
